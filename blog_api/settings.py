@@ -151,3 +151,5 @@ CORS_ORIGIN_WHITELIST = (
     "http://www.localhost:3000",
     "http://www.localhost:8000",
 )
+
+CSRF_TRUSTED_ORIGINS = ["http://www.localhost:3000"]
