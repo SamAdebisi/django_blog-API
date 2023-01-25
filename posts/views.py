@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 
 from .models import Post
 from .serializers import PostSerializer
@@ -10,5 +10,6 @@ class PostList(generics.ListCreateAPIView):
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (permissions.IsAdminUser,)
     queryset = Post.objects.all()
     serializer_class = PostSerializer
