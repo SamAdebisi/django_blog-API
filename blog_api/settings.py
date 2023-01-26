@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # third party
     "rest_framework",
     "corsheaders",
+    "rest_framework.authtoken",
 
     # local
     "accounts.apps.AccountsConfig",
